@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: cornsilk;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    
+    background: white;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+    transition: 1s;
+}
+
+.card:hover {
+    transform: rotateX(50%);
+}
+
+.card .image-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    background: black;
+    transition: 1s;
+}
+
+.card:hover .image-box {
+    transform: rotateY(-180deg);
+}
+
+.card .image-box .img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.card .image-details {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .image-details .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card .image-details .content h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2em;
+    line-height: 1em;
+}
+
+.card .image-details .content h3 {
+    color: red;
+    font-size: 1.4em;
+}
+
+.card .image-details .content .social-icons {
+    position: relative;
+    display: flex;
+    margin-top: 30px;
+}
+
+.card .image-details .content .social-icons a {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 5px;
+    font-size: 18px;
+    border-radius: 50%;
+    margin: 5px;
+    border: 10px solid black;
+}
+
+.card .image-details .content .social-icons a:hover {
+    border: 10px solid Red;
+}
+
+.social-icon-img img{
+    width: 30px;
+}
+
+
+
+</style>
+<body>
+    
+    <div class="card">
+        <div class="image-box">
+            <div class="img"></div>
+        </div>
+        <div class="image-details">
+            <div class="content">
+                <h2>Bhavya Ghvariya</h2>
+                <h3>Graphic Designer</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon-img"><img src="https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Linkedin_svg-128.png" alt=""></a>
+                    <a href="#" class="social-icon-img"><img src="https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Instagram_svg-128.png" alt=""></a>
+                    <a href="#" class="social-icon-img"><img src="https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Facebook_svg-128.png" alt=""></a>
+                    <a href="#" class="social-icon-img"><img src="https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Twitter_svg-128.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+
+</script>
+</html>
